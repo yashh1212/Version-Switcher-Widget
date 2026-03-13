@@ -6,13 +6,13 @@
       name: 'v1', 
       url: 'https://yashdhokane.vercel.app/', 
       // Using a sleek placeholder image for now. You can replace this with a screenshot of v1.
-      image: 'v1.png' 
+      image: '/v1.png' 
     },
     { 
       name: 'v2', 
       url: 'https://yashdhokane-v2.vercel.app/', 
       // Using a sleek placeholder image for now. You can replace this with a screenshot of v2.
-      image: 'v2.png' 
+      image: '/v2.png' 
     }
   ];
 
@@ -96,7 +96,6 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      /* Brittany Chiang style purple/blue/pink/white conic gradient */
       background: conic-gradient(
         from 0deg,
         #6366f1,    /* Indigo/Blue */
@@ -108,11 +107,18 @@
       );
       filter: blur(80px);
       opacity: 0.7;
-      animation: pc-spin 15s linear infinite;
+      /* We use two animations: one to spin it consistently, one to pulse the colors/intensity */
+      animation: pc-spin 8s linear infinite, pc-pulse 5s ease-in-out infinite alternate;
     }
 
     @keyframes pc-spin {
+      0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pc-pulse {
+      0% { opacity: 0.5; filter: blur(70px) hue-rotate(0deg); }
+      100% { opacity: 0.9; filter: blur(100px) hue-rotate(60deg); }
     }
 
     /* White Inner Circle for text readability */

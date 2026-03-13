@@ -6,13 +6,13 @@
       name: 'v1', 
       url: 'https://yashdhokane.vercel.app/', 
       // Using a sleek placeholder image for now. You can replace this with a screenshot of v1.
-      image: 'public/v1.png' 
+      image: './public/v1.png' 
     },
     { 
       name: 'v2', 
       url: 'https://yashdhokane-v2.vercel.app/', 
       // Using a sleek placeholder image for now. You can replace this with a screenshot of v2.
-      image: 'public/v2.png' 
+      image: './public/v2.png' 
     }
   ];
 
